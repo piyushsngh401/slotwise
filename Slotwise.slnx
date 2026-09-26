@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Slotwise.Api/Slotwise.Api.csproj" />
+    <Project Path="src/Slotwise.AppHost/Slotwise.AppHost.csproj" />
+    <Project Path="src/Slotwise.ServiceDefaults/Slotwise.ServiceDefaults.csproj" />
+    <Project Path="src/Slotwise.SharedKernel/Slotwise.SharedKernel.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Slotwise.Api.IntegrationTests/Slotwise.Api.IntegrationTests.csproj" />
+    <Project Path="tests/Slotwise.ArchitectureTests/Slotwise.ArchitectureTests.csproj" />
+  </Folder>
+</Solution>
