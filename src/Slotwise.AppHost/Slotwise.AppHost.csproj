@@ -1,0 +1,12 @@
+<Project Sdk="Aspire.AppHost.Sdk/13.5.4">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <UserSecretsId>6f0c2f1e-3b7a-4d0e-9c52-2d8f1a7b9e41</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Slotwise.Api\Slotwise.Api.csproj" />
+  </ItemGroup>
+
+</Project>

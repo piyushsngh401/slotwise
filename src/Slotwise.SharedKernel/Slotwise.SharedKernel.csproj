@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Minimal abstractions shared by the host and every module.
+    Keep this project small: it must never reference the API host or any module.
+    Enforced by tests/Slotwise.ArchitectureTests.
+  -->
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+</Project>
