@@ -23,7 +23,7 @@ public sealed class DependencyRulesTests
             .HaveDependencyOnAny("Slotwise.Api", "Slotwise.ServiceDefaults", "Slotwise.Modules")
             .GetResult();
 
-        result.IsSuccessful.ShouldBeTrue(Describe(result));
+        result.IsSuccessful.ShouldBeTrue(DescribeViolations(result.FailingTypeNames));
     }
 
     [Fact]
@@ -49,8 +49,8 @@ public sealed class DependencyRulesTests
             .Where(reference => reference.Name!.StartsWith(ModuleAssemblyPrefix, StringComparison.Ordinal))
             .Select(Assembly.Load);
 
-    private static string Describe(TestResult result) =>
-        result.FailingTypeNames is null
+    private static string DescribeViolations(IEnumerable<string>? failingTypeNames) =>
+        failingTypeNames is null
             ? string.Empty
-            : "Violations: " + string.Join(", ", result.FailingTypeNames);
+            : "Violations: " + string.Join(", ", failingTypeNames);
 }
