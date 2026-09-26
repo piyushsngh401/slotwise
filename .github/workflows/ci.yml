@@ -46,12 +46,18 @@ jobs:
 
       - name: Test
         run: >
-          dotnet test Slotwise.slnx
+          dotnet test
+          --solution Slotwise.slnx
           --configuration Release
           --no-build
-          --logger "trx"
-          --collect "XPlat Code Coverage"
-          --results-directory TestResults
+          --results-directory "$GITHUB_WORKSPACE/TestResults"
+          --report-xunit-trx
+          --coverage
+          --coverage-output-format cobertura
+
+      - name: Annotate failed tests
+        if: failure()
+        run: python3 .github/scripts/annotate_trx.py TestResults
 
       - name: Upload test results
         if: always()

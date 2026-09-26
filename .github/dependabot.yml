@@ -12,7 +12,7 @@ updates:
       microsoft:
         patterns: ["Microsoft.*"]
       testing:
-        patterns: ["xunit*", "Shouldly", "NetArchTest.*", "coverlet.*"]
+        patterns: ["xunit*", "Shouldly", "NetArchTest.*", "Microsoft.Testing.*"]
 
   - package-ecosystem: github-actions
     directory: /
